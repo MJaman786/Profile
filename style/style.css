@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "SUSE", sans-serif;
+    font-weight: 200;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.hbar {
+    padding: 10px 20px;
+    background-color: black;
+    border-bottom: 1px solid #fff;
+}
+
+.hbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.hbar li {
+    margin-left: 20px;
+}
+
+.hbar li:first-child {
+    margin-right: auto;
+}
+
+.hbar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hbar a i {
+    font-size: 24px;
+}
+
+/* Responsive Styles */
+@media (max-width: 620px) {
+    .hbar ul li {
+        display: none;
+    }
+
+    .hbar ul li:first-child {
+        display: block;
+        /* margin-left: auto; */
+    }
+
+}
+
+/* Vertical sidebar styles */
+.vbar {
+    width: 250px;
+    height: 100%;
+    /* background-color: magenta; */
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: left 0.3s;
+}
+
+.vbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.vbar ul li {
+    margin: 10px 10px;
+}
+
+.vbar .las {
+    /* margin-left: 10px;   */
+    font-size: 20px;
+}
+
+.vbar a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+/* When sidebar is toggled */
+.vbar.active {
+    left: 0;
+}
+
+/* main container */
+/* main container */
+.main-container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    background-color: black;
+    padding: 20px;
+}
+
+.image_container,
+.text_container {
+    width: 50%;
+    height: 100%;
+    margin: 2px;
+    padding: 20px;
+}
+
+.image_container {
+    background-image: url("../assets_images/satoru-gojo-black-2560x1440-14684.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.text_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text_container h1,
+p,
+.icon_container {
+    text-align: justify;
+    color: white;
+    padding: 10px;
+}
+.icon_container a{
+    color: #3b58a7;
+}
+.text_container h1,
+span {
+    font-size: 50px;
+    font-family: "Protest Guerrilla", system-ui;
+}
+
+.text_container p {
+    font-family: "SUSE", sans-serif;
+    font-weight: 200;
+}
+
+.lab, .las {
+    font-size: 40px;
+    transition: all 0.5s;
+}
+
+.lab:hover, .las:hover {
+    color: #fff;
+}
+
+@media (max-width:720px) {
+    .image_container {
+        display: none;
+    }
+
+    .text_container {
+        width: 100%;
+    }
+
+    .icon_container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width:480px) {
+    .image_container {
+        display: none;
+    }
+
+    .text_container {
+        width: 100%;
+    }
+
+    .text_container h1,
+    span {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .text_container p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .icon_container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+/* footer */
+.footer-container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    /* background-color: black; */
+    background-color: mediumspringgreen;
+    padding: 20px;
+}
